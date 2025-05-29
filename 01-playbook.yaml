@@ -2,4 +2,5 @@
   hosts: frontend
   tasks: #list of tasks
   - name: ping the server 
+    msg: "Hello World"
     ansible.builtin.ping:
