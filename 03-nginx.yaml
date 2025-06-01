@@ -5,9 +5,10 @@
   - name: install nginx server
     ansible.builtin.package:
       name: nginx
-      state: present # present means install
+      state: present  #present means install
+
   - name: start nginx
-    ansible.bulitin.service:
+    ansible.builtin.service:
       name: nginx
       state: started 
       enable: yes
