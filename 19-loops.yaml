@@ -3,7 +3,7 @@
   become: yes
   tasks:
     - name: install packages
-      ansible.builtin.package:
+      ansible.builtin.protected_packages:
         name: "{{ item.name }}"
         state: "{{ item.state }}"
       loop:
