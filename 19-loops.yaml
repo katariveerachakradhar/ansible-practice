@@ -11,7 +11,7 @@
       - { name: 'nginx', state: 'present' }
       - { name: 'python3', state: 'absent' }
   when: absent
-  ansible.builtin.protected_package:
+  ansible.builtin.protected_packages:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
 
