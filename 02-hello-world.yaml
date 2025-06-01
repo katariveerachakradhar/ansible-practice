@@ -5,6 +5,5 @@
     - name: print Hello World
       ansible.builtin.debug:
         msg: "Hello World"
-        msg: "Hi World"
-        
+
         
