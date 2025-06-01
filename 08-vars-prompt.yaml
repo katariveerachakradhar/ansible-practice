@@ -4,11 +4,11 @@
   vars_prompt:
   - name: USERNAME
     prompt: Please enter your username
-    private: false
+    private: false #false means it won't show while typing
   
   - name: PASSWORD
     prompt: please enter your password
-    private: true
+    private: true #true means it will show while typing
   tasks:
   - name: printing user information
     ansible.builtin.debug:
