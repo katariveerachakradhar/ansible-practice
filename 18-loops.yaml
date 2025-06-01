@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: installting packages
-    ansible.builtin.package:
+    ansible.builtin.dnf:
       msg: "Packages are, {{ item }}"
     loop:
     - mysql
