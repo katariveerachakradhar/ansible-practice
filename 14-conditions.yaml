@@ -12,9 +12,9 @@
   - name: print if the number is less than or equal to 1000
     ansible.builtin.debug:
       msg: "Given number {{ NUMBER }} is less than or equal to 1000"
-    when: NUMBER <= 1000
+    when: NUMBER | int <= 1000
 
   - name: print if the number is greater than 1000
     ansible.builtin.debug:
       msg: "Given number {{ NUMBER }} is greater than 1000"
-    when: NUMBER > 1000
+    when: NUMBER | int >= 1000
