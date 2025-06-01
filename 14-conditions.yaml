@@ -3,7 +3,7 @@
   connection: local
 
   vars_prompt:
-  - name: NUMBER
+  - name: NUMBER #it will take input as string 
     prompt: Please enter your number
     private: true
   #vars:
@@ -12,7 +12,7 @@
   - name: print if the number is less than or equal to 1000
     ansible.builtin.debug:
       msg: "Given number {{ NUMBER }} is less than or equal to 1000"
-    when: NUMBER | int <= 1000
+    when: NUMBER | int <= 1000 # Here were using this and converting string value to int and passing inside
 
   - name: print if the number is greater than 1000
     ansible.builtin.debug:
