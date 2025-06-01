@@ -1,6 +1,8 @@
 - name: variables from file
   hosts: local
   connection: local
+  vars_files:
+    - course.yaml # if we remove - means it will take details from course.yaml and print the details from that
   tasks:
     - name: print course information
       ansible.builtin.debug:
