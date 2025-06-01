@@ -9,6 +9,7 @@
   - name: print course information
     vars: 
       COURSE: AWS
+      DURATION: 120HR
     ansible.builtin.debug:
       msg: "Hello {{ COURSE }}, Course Duration: {{ DURATION }}, Trainer is {{ TRAINER }}"
 
