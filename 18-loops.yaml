@@ -5,6 +5,7 @@
   - name: installting packages
     ansible.builtin.dnf:
       msg: "Packages are, {{ item }}"
+      state: installed
     loop:
     - mysql
     - nginx
