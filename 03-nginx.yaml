@@ -3,7 +3,7 @@
   become: yes #sudo access
   tasks:
   - name: install nginx server
-    ansible.builtin.pacakge:
+    ansible.builtin.package:
       name: nginx
       state: present # present means install
   - name: start nginx
