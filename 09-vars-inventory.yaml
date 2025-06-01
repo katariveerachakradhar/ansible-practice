@@ -1,8 +1,11 @@
 - name: variables from inventory
   hosts: local
   connection: local
+  vars_prompt:
+  - name: USERNAME
+    prompt: Please enter your username
+    private: true
   tasks:
   - name: print course info
     ansible.builtin.debug:
-      prompt:
-      #msg: "Hello I am learning {{ COURSE }}, Duration: {{ DURATION }}, Trainer is: {{ TRAINER }}"
+      msg: "Hello I am learning {{ COURSE }}, Duration: {{ DURATION }}, Trainer is: {{ TRAINER }}"
