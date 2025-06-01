@@ -4,11 +4,11 @@
   tasks:
   - name: install nginx server
     ansible.builtin.pacakge:
-    state: present # present means install
-  
+      name: nginx
+      state: present # present means install
   - name: start nginx
     ansible.bulitin.service:
-    name: nginx
-    state: started 
-    enable: yes
+      name: nginx
+      state: started 
+      enable: yes
 
